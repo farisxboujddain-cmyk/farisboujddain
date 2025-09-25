@@ -1,65 +1,272 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AXIOMTECH - حلول ويب ورقمية احترافية</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #0f1720;
-            color: #fff;
-            text-align: center;
-        }
-        header {
-            background: #0f1728;
-            padding: 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-        .container {
-            padding: 40px 20px;
-        }
-        .btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 12px 25px;
-            background: #0ea5a4;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: #9aa7b6;
-        }
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: #0f1728;
-            font-size: 14px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AXIOMTECH - حلول ويب ورقمية</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Tahoma", sans-serif;
+      background: #0d1b2a;
+      color: white;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    header {
+      padding: 2rem;
+      background: #1b263b;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #00b4d8;
+    }
+
+    header p {
+      margin-top: .5rem;
+      color: #caf0f8;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: #1e2a47;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    }
+
+    .social a {
+      display: inline-block;
+      margin: .5rem;
+      padding: .7rem 1.2rem;
+      background: #00b4d8;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .social a:hover {
+      background: #0077b6;
+    }
+
+    footer {
+      background: #1b263b;
+      padding: 1rem;
+      font-size: .9rem;
+      color: #aaa;
+    }
+
+    /* Chatbot */
+    .chat-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #00b4d8;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,.3);
+    }
+
+    .chat-window {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 300px;
+      max-height: 420px;
+      background: #fff;
+      color: #000;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.4);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: #00b4d8;
+      color: #fff;
+      padding: .8rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .chat-body {
+      flex: 1;
+      padding: .8rem;
+      overflow-y: auto;
+      font-size: .9rem;
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+
+    .chat-input input {
+      flex: 1;
+      border: none;
+      padding: .6rem;
+      font-size: .9rem;
+    }
+
+    .chat-input button {
+      border: none;
+      background: #00b4d8;
+      color: #fff;
+      padding: 0 .9rem;
+      cursor: pointer;
+    }
+
+    .msg {
+      margin: .4rem 0;
+      padding: .5rem;
+      border-radius: 6px;
+    }
+
+    .bot {
+      background: #e0f7fa;
+      text-align: left;
+    }
+
+    .user {
+      background: #90e0ef;
+      text-align: right;
+    }
+
+    .options button {
+      margin: 4px;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 5px;
+      background: #00b4d8;
+      color: #fff;
+      cursor: pointer;
+      font-size: .8rem;
+    }
+
+    .options button:hover {
+      background: #0077b6;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>AXIOMTECH</h1>
-        <p>حلول ويب ورقمية احترافية</p>
-    </header>
+  <header>
+    <h1>AXIOMTECH</h1>
+    <p>حلول ويب ورقمية احترافية</p>
+  </header>
 
-    <div class="container">
-        <h2>تواصل معنا</h2>
-        <a href="https://www.linkedin.com/in/fares-boujeddien-b28115384" class="btn">LinkedIn</a>
-        <a href="https://x.com/FBoujeddaien" class="btn">Twitter</a>
-        <a href="mailto:techaxiom0@gmail.com" class="btn">البريد الإلكتروني</a>
+  <section>
+    <h2>من نحن</h2>
+    <p>شركة تقنية تقدم خدمات تطوير الويب، البرمجة، والحلول الرقمية لمساعدتك على النمو في العالم الرقمي.</p>
+  </section>
+
+  <section>
+    <h2>خدماتنا</h2>
+    <div class="services">
+      <div class="card">⚡ تطوير مواقع ويب احترافية</div>
+      <div class="card">📱 إنشاء تطبيقات موبايل</div>
+      <div class="card">☁️ حلول سحابية ورقمية</div>
+      <div class="card">🎯 استشارات تقنية</div>
     </div>
+  </section>
 
-    <footer>
-        <p>© 2025 AXIOMTECH - جميع الحقوق محفوظة</p>
-    </footer>
+  <section>
+    <h2>تواصل معنا</h2>
+    <div class="social">
+      <a href="https://x.com/FBoujeddaien" target="_blank">Twitter</a>
+      <a href="https://www.linkedin.com/in/fares-boujeddien-b28115384" target="_blank">LinkedIn</a>
+      <a href="mailto:techaxiom0@gmail.com">البريد الإلكتروني</a>
+    </div>
+  </section>
+
+  <footer>
+    جميع الحقوق محفوظة © AXIOMTECH 2025
+  </footer>
+
+  <!-- Chatbot -->
+  <button class="chat-button" onclick="toggleChat()">💬</button>
+
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">مساعد AXIOMTECH</div>
+    <div class="chat-body" id="chatBody">
+      <div class="msg bot">👋 أهلا! مرحبا بك في AXIOMTECH.</div>
+      <div class="msg bot">📌 اختار واحد الخيار أسفَل:</div>
+      <div class="options" id="botOptions">
+        <button onclick="botOption('الخدمات')">🛠️ خدماتنا</button>
+        <button onclick="botOption('التواصل')">📩 تواصل معنا</button>
+        <button onclick="botOption('حول')">ℹ️ من نحن</button>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="اكتب رسالتك..." onkeypress="if(event.key==='Enter') sendMsg()">
+      <button onclick="sendMsg()">إرسال</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      const chat = document.getElementById('chatWindow');
+      chat.style.display = (chat.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    function sendMsg() {
+      const input = document.getElementById('userInput');
+      const chatBody = document.getElementById('chatBody');
+      const msg = input.value.trim();
+      if (msg === "") return;
+
+      addMessage(msg, "user");
+
+      // simple logic
+      if (msg.includes("خدمات")) {
+        botOption("الخدمات");
+      } else if (msg.includes("تواصل")) {
+        botOption("التواصل");
+      } else if (msg.includes("من")) {
+        botOption("حول");
+      } else {
+        addMessage("🤔 ممكن تختار من الأزرار باش نجاوبك بشكل أدق.", "bot");
+      }
+
+      input.value = "";
+    }
+
+    function botOption(option) {
+      if (option === "الخدمات") {
+        addMessage("🛠️ خدماتنا: تطوير مواقع ويب، تطبيقات موبايل، حلول سحابية، واستشارات تقنية.", "bot");
+      } else if (option === "التواصل") {
+        addMessage("📩 تقدر تتواصل معنا عبر:\n- LinkedIn\n- Twitter\n- techaxiom0@gmail.com", "bot");
+      } else if (option === "حول") {
+        addMessage("ℹ️ نحن شركة تقنية هدفها تقديم حلول ويب ورقمية مبتكرة لدعم أعمالك.", "bot");
+      }
+    }
+
+    function addMessage(text, sender) {
+      const chatBody = document.getElementById('chatBody');
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `msg ${sender}`;
+      msgDiv.innerText = text;
+      chatBody.appendChild(msgDiv);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+  </script>
 </body>
 </html>
