@@ -1,235 +1,65 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AxiomTech — Professional Web & Digital Solutions</title>
-  <meta name="description" content="AxiomTech — building modern and scalable digital solutions. Contact: techaxiom0@gmail.com" />
-  <style>
-    :root{
-      --bg:#0f1720;
-      --card:#0f1728;
-      --muted:#9aa7b6;
-      --accent:#0ea5a4;
-      --white:#ffffff;
-      --glass: rgba(255,255,255,0.03);
-      --radius:14px;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      min-height:100vh;
-      background:linear-gradient(180deg,#071025 0%,#081226 60%);
-      color:var(--white);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:32px;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-    .container{
-      width:100%;
-      max-width:920px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:18px;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
-      padding:28px;
-      border:1px solid rgba(255,255,255,0.03);
-    }
-    header{
-      display:flex;
-      gap:18px;
-      align-items:center;
-    }
-    .logo {
-      width:72px;
-      height:72px;
-      border-radius:14px;
-      background:linear-gradient(135deg,#0ea5a4 0%, #3b82f6 100%);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:var(--white);
-      font-weight:700;
-      font-size:18px;
-      box-shadow:0 6px 18px rgba(14,165,164,0.12), inset 0 -4px 10px rgba(255,255,255,0.02);
-    }
-    h1{
-      margin:0;
-      font-size:22px;
-      letter-spacing:0.2px;
-    }
-    p.lead{
-      margin:10px 0 0 0;
-      color:var(--muted);
-      line-height:1.5;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 260px;
-      gap:20px;
-      margin-top:22px;
-    }
-
-    .card{
-      background:var(--glass);
-      border-radius:12px;
-      padding:18px;
-      border:1px solid rgba(255,255,255,0.02);
-    }
-
-    .services{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:12px;
-    }
-    .service{
-      background: rgba(255,255,255,0.02);
-      padding:10px 12px;
-      border-radius:10px;
-      color:var(--white);
-      font-size:14px;
-      border:1px solid rgba(255,255,255,0.015);
-    }
-
-    .contact{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      align-items:stretch;
-    }
-    .contact .btn{
-      display:inline-flex;
-      gap:10px;
-      align-items:center;
-      justify-content:center;
-      padding:12px 14px;
-      border-radius:10px;
-      background:transparent;
-      color:var(--white);
-      border:1px solid rgba(255,255,255,0.06);
-      text-decoration:none;
-      transition:all .18s ease;
-      font-weight:600;
-    }
-    .btn:hover{
-      transform:translateY(-3px);
-      box-shadow: 0 8px 24px rgba(2,6,23,0.45);
-    }
-
-    .btn.primary{
-      background: linear-gradient(90deg,#0ea5a4,#3b82f6);
-      border:none;
-      color:#001216;
-    }
-
-    .socials{
-      display:flex;
-      gap:8px;
-      margin-top:6px;
-    }
-    .socials a{
-      display:inline-flex;
-      width:44px;
-      height:44px;
-      align-items:center;
-      justify-content:center;
-      border-radius:10px;
-      background: rgba(255,255,255,0.02);
-      color:var(--white);
-      text-decoration:none;
-      border:1px solid rgba(255,255,255,0.02);
-    }
-
-    footer{
-      margin-top:18px;
-      color:var(--muted);
-      font-size:13px;
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      align-items:center;
-    }
-
-    @media (max-width:780px){
-      .grid{ grid-template-columns: 1fr; }
-      .contact{ flex-direction:row; flex-wrap:wrap; }
-      .contact .btn{ flex:1; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXIOMTECH - حلول ويب ورقمية احترافية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0f1720;
+            color: #fff;
+            text-align: center;
+        }
+        header {
+            background: #0f1728;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .container {
+            padding: 40px 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background: #0ea5a4;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #9aa7b6;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #0f1728;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-  <main class="container" role="main">
     <header>
-      <div class="logo" aria-hidden="true">A</div>
-      <div>
-        <h1>AxiomTech</h1>
-        <p class="lead">Founder of AxiomTech | Web Developer specialized in building modern and scalable digital solutions.</p>
-      </div>
+        <h1>AXIOMTECH</h1>
+        <p>حلول ويب ورقمية احترافية</p>
     </header>
 
-    <div class="grid" role="region" aria-label="Main content">
-      <section class="card" aria-labelledby="services-title">
-        <h2 id="services-title" style="margin:0 0 8px 0;">Our Services</h2>
-        <p style="color:var(--muted); margin:0 0 12px 0;">
-          We build professional websites, scalable web applications, and provide consulting on digital transformation and infrastructure.
-        </p>
-
-        <div class="services" aria-hidden="false">
-          <div class="service">Custom Web Development</div>
-          <div class="service">Responsive Design & UI/UX</div>
-          <div class="service">APIs & Backend</div>
-          <div class="service">Database Design (Postgres)</div>
-          <div class="service">Maintenance & Support</div>
-        </div>
-
-        <footer style="margin-top:18px;">
-          <small style="color:var(--muted)">Contact us to discuss your project.</small>
-        </footer>
-      </section>
-
-      <aside class="card" aria-labelledby="contact-title">
-        <h2 id="contact-title" style="margin:0 0 8px 0;">Get in touch</h2>
-        <div class="contact">
-          <!-- Email button -->
-          <a class="btn primary" href="mailto:techaxiom0@gmail.com" title="Email AxiomTech">
-            <!-- mail icon -->
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 8.5v7A2.5 2.5 0 0 0 5.5 18h13A2.5 2.5 0 0 0 21 15.5v-7" stroke="#001216" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="#fff"/>
-              <path d="M21 8.5l-8 5-8-5" stroke="#001216" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Email: techaxiom0@gmail.com
-          </a>
-
-          <!-- Social links -->
-          <div style="margin-top:6px;color:var(--muted);font-size:13px">Follow us</div>
-          <div class="socials" role="navigation" aria-label="Social links">
-            <a href="https://www.linkedin.com/in/fares-boujeddien-b28115384?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-              <!-- LinkedIn SVG -->
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.75h5V24H0V8.75zM8 8.75h4.78v2.05h.07c.67-1.27 2.3-2.61 4.73-2.61C23.29 8.19 24 11.01 24 14.97V24h-5V15.9c0-2.06-.04-4.71-2.86-4.71-2.86 0-3.29 2.23-3.29 4.55V24H8V8.75z" fill="#fff"/>
-              </svg>
-            </a>
-
-            <a href="https://x.com/FBoujeddaien?t=-UaA7GgJH2CXKoV_KTsK-g&s=09" target="_blank" rel="noopener noreferrer" title="Twitter / X">
-              <!-- X / Twitter SVG -->
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                <path d="M23 4.01c-.8.36-1.66.6-2.56.71a4.5 4.5 0 0 0-7.68 3.08v.56A12.8 12.8 0 0 1 3.16 3.15a4.44 4.44 0 0 0-.61 2.26c0 1.56.8 2.93 2.02 3.73-.74-.02-1.44-.22-2.05-.56v.06c0 2.18 1.55 4.01 3.61 4.42-.38.1-.78.14-1.19.14-.29 0-.57-.03-.84-.08.57 1.8 2.24 3.11 4.22 3.15A9.03 9.03 0 0 1 1.92 19c.77.54 1.68.84 2.62.84 3.14 0 4.85-2.6 4.85-4.86v-.22c.66-.5 1.23-1.13 1.69-1.85.98-1.45 2.25-2.6 3.76-3.25-.31 1.01-.97 1.86-1.83 2.39z" fill="#fff"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </aside>
+    <div class="container">
+        <h2>تواصل معنا</h2>
+        <a href="https://www.linkedin.com/in/fares-boujeddien-b28115384" class="btn">LinkedIn</a>
+        <a href="https://x.com/FBoujeddaien" class="btn">Twitter</a>
+        <a href="mailto:techaxiom0@gmail.com" class="btn">البريد الإلكتروني</a>
     </div>
 
     <footer>
-      <div>© <strong>AxiomTech</strong> — All rights reserved.</div>
-      <div style="color:var(--muted);font-size:13px">Made with care • <a href="https://risexiom.github.io/xiomtech-website/" target="_blank" rel="noopener noreferrer" style="color:var(--muted); text-decoration:underline;">Visit website</a></div>
+        <p>© 2025 AXIOMTECH - جميع الحقوق محفوظة</p>
     </footer>
-  </main>
 </body>
 </html>
