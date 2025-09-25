@@ -1,272 +1,203 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AXIOMTECH - حلول ويب ورقمية</title>
+  <title>AxiomTech - Official Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: "Tahoma", sans-serif;
-      background: #0d1b2a;
-      color: white;
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+    .navbar {
+      background-color: #111;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://picsum.photos/1600/600") center/cover;
+      color: #fff;
+      padding: 120px 20px;
       text-align: center;
     }
-
-    header {
-      padding: 2rem;
-      background: #1b263b;
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #00c3ff;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: #00b4d8;
+    .section {
+      padding: 60px 20px;
     }
-
-    header p {
-      margin-top: .5rem;
-      color: #caf0f8;
+    .footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
     }
-
-    section {
-      padding: 2rem;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-    }
-
-    .card {
-      background: #1e2a47;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,.3);
-    }
-
-    .social a {
-      display: inline-block;
-      margin: .5rem;
-      padding: .7rem 1.2rem;
-      background: #00b4d8;
-      color: #fff;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .social a:hover {
-      background: #0077b6;
-    }
-
-    footer {
-      background: #1b263b;
-      padding: 1rem;
-      font-size: .9rem;
-      color: #aaa;
-    }
-
-    /* Chatbot */
-    .chat-button {
+    /* Chatbot floating button */
+    .chatbot-btn {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: #00b4d8;
+      background-color: #00c3ff;
+      color: #fff;
       border: none;
       border-radius: 50%;
       width: 60px;
       height: 60px;
-      font-size: 28px;
-      color: #fff;
+      font-size: 24px;
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
-
-    .chat-window {
+    .chatbox {
       position: fixed;
       bottom: 90px;
       right: 20px;
-      width: 300px;
-      max-height: 420px;
-      background: #fff;
-      color: #000;
+      width: 280px;
+      background: #1a1a1a;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,.4);
       display: none;
       flex-direction: column;
       overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.7);
     }
-
-    .chat-header {
-      background: #00b4d8;
+    .chatbox-header {
+      background: #00c3ff;
       color: #fff;
-      padding: .8rem;
-      text-align: center;
+      padding: 10px;
       font-weight: bold;
     }
-
-    .chat-body {
-      flex: 1;
-      padding: .8rem;
+    .chatbox-messages {
+      padding: 10px;
+      height: 200px;
       overflow-y: auto;
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
-
-    .chat-input {
+    .chatbox-input {
       display: flex;
-      border-top: 1px solid #ddd;
     }
-
-    .chat-input input {
+    .chatbox-input input {
       flex: 1;
+      padding: 10px;
       border: none;
-      padding: .6rem;
-      font-size: .9rem;
+      outline: none;
     }
-
-    .chat-input button {
-      border: none;
-      background: #00b4d8;
+    .chatbox-input button {
+      background: #00c3ff;
       color: #fff;
-      padding: 0 .9rem;
-      cursor: pointer;
-    }
-
-    .msg {
-      margin: .4rem 0;
-      padding: .5rem;
-      border-radius: 6px;
-    }
-
-    .bot {
-      background: #e0f7fa;
-      text-align: left;
-    }
-
-    .user {
-      background: #90e0ef;
-      text-align: right;
-    }
-
-    .options button {
-      margin: 4px;
-      padding: 6px 10px;
       border: none;
-      border-radius: 5px;
-      background: #00b4d8;
-      color: #fff;
-      cursor: pointer;
-      font-size: .8rem;
-    }
-
-    .options button:hover {
-      background: #0077b6;
+      padding: 10px 15px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>AXIOMTECH</h1>
-    <p>حلول ويب ورقمية احترافية</p>
-  </header>
 
-  <section>
-    <h2>من نحن</h2>
-    <p>شركة تقنية تقدم خدمات تطوير الويب، البرمجة، والحلول الرقمية لمساعدتك على النمو في العالم الرقمي.</p>
-  </section>
-
-  <section>
-    <h2>خدماتنا</h2>
-    <div class="services">
-      <div class="card">⚡ تطوير مواقع ويب احترافية</div>
-      <div class="card">📱 إنشاء تطبيقات موبايل</div>
-      <div class="card">☁️ حلول سحابية ورقمية</div>
-      <div class="card">🎯 استشارات تقنية</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>تواصل معنا</h2>
-    <div class="social">
-      <a href="https://x.com/FBoujeddaien" target="_blank">Twitter</a>
-      <a href="https://www.linkedin.com/in/fares-boujeddien-b28115384" target="_blank">LinkedIn</a>
-      <a href="mailto:techaxiom0@gmail.com">البريد الإلكتروني</a>
-    </div>
-  </section>
-
-  <footer>
-    جميع الحقوق محفوظة © AXIOMTECH 2025
-  </footer>
-
-  <!-- Chatbot -->
-  <button class="chat-button" onclick="toggleChat()">💬</button>
-
-  <div class="chat-window" id="chatWindow">
-    <div class="chat-header">مساعد AXIOMTECH</div>
-    <div class="chat-body" id="chatBody">
-      <div class="msg bot">👋 أهلا! مرحبا بك في AXIOMTECH.</div>
-      <div class="msg bot">📌 اختار واحد الخيار أسفَل:</div>
-      <div class="options" id="botOptions">
-        <button onclick="botOption('الخدمات')">🛠️ خدماتنا</button>
-        <button onclick="botOption('التواصل')">📩 تواصل معنا</button>
-        <button onclick="botOption('حول')">ℹ️ من نحن</button>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">AxiomTech</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
       </div>
     </div>
-    <div class="chat-input">
-      <input type="text" id="userInput" placeholder="اكتب رسالتك..." onkeypress="if(event.key==='Enter') sendMsg()">
-      <button onclick="sendMsg()">إرسال</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Innovating Your Digital Future</h1>
+    <p>We deliver cutting-edge web solutions tailored for your business.</p>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section text-center">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>AxiomTech is a technology-driven company providing innovative web development and IT solutions for businesses worldwide.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section bg-dark text-center">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="row mt-4">
+        <div class="col-md-4"><h5>🌐 Web Development</h5><p>Modern, responsive websites tailored to your needs.</p></div>
+        <div class="col-md-4"><h5>⚙️ IT Solutions</h5><p>Efficient systems to improve your business workflow.</p></div>
+        <div class="col-md-4"><h5>📊 Consulting</h5><p>Expert advice to grow your digital presence.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section text-center">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:techaxiom0@gmail.com" class="text-info">techaxiom0@gmail.com</a></p>
+      <p>
+        <a href="https://www.linkedin.com/in/fares-boujeddien-b28115384" class="text-info" target="_blank">LinkedIn</a> |
+        <a href="https://x.com/FBoujeddaien" class="text-info" target="_blank">Twitter</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 AxiomTech. All Rights Reserved.
+  </div>
+
+  <!-- Chatbot -->
+  <button class="chatbot-btn" onclick="toggleChat()">💬</button>
+  <div class="chatbox" id="chatbox">
+    <div class="chatbox-header">AxiomTech Bot</div>
+    <div class="chatbox-messages" id="chat-messages"></div>
+    <div class="chatbox-input">
+      <input type="text" id="chat-input" placeholder="Type a message...">
+      <button onclick="sendMessage()">Send</button>
     </div>
   </div>
 
+  <!-- Chatbot Script -->
   <script>
     function toggleChat() {
-      const chat = document.getElementById('chatWindow');
-      chat.style.display = (chat.style.display === 'flex') ? 'none' : 'flex';
+      const chatbox = document.getElementById("chatbox");
+      chatbox.style.display = (chatbox.style.display === "flex") ? "none" : "flex";
     }
 
-    function sendMsg() {
-      const input = document.getElementById('userInput');
-      const chatBody = document.getElementById('chatBody');
-      const msg = input.value.trim();
-      if (msg === "") return;
+    function sendMessage() {
+      const input = document.getElementById("chat-input");
+      const messages = document.getElementById("chat-messages");
+      const userMsg = input.value.trim();
+      if (!userMsg) return;
 
-      addMessage(msg, "user");
-
-      // simple logic
-      if (msg.includes("خدمات")) {
-        botOption("الخدمات");
-      } else if (msg.includes("تواصل")) {
-        botOption("التواصل");
-      } else if (msg.includes("من")) {
-        botOption("حول");
-      } else {
-        addMessage("🤔 ممكن تختار من الأزرار باش نجاوبك بشكل أدق.", "bot");
-      }
-
+      // User message
+      messages.innerHTML += `<div><b>You:</b> ${userMsg}</div>`;
       input.value = "";
-    }
 
-    function botOption(option) {
-      if (option === "الخدمات") {
-        addMessage("🛠️ خدماتنا: تطوير مواقع ويب، تطبيقات موبايل، حلول سحابية، واستشارات تقنية.", "bot");
-      } else if (option === "التواصل") {
-        addMessage("📩 تقدر تتواصل معنا عبر:\n- LinkedIn\n- Twitter\n- techaxiom0@gmail.com", "bot");
-      } else if (option === "حول") {
-        addMessage("ℹ️ نحن شركة تقنية هدفها تقديم حلول ويب ورقمية مبتكرة لدعم أعمالك.", "bot");
-      }
-    }
+      setTimeout(() => {
+        let botReply = "";
+        const msg = userMsg.toLowerCase();
 
-    function addMessage(text, sender) {
-      const chatBody = document.getElementById('chatBody');
-      const msgDiv = document.createElement('div');
-      msgDiv.className = `msg ${sender}`;
-      msgDiv.innerText = text;
-      chatBody.appendChild(msgDiv);
-      chatBody.scrollTop = chatBody.scrollHeight;
+        if (msg.includes("hello") || msg.includes("hi")) {
+          botReply = "Hello! 👋 Welcome to AxiomTech. How can I help you today?";
+        } else if (msg.includes("services")) {
+          botReply = "✅ Our Services:\n1. Web Development 🌐\n2. IT Solutions ⚙️\n3. Consulting 📊";
+        } else if (msg.includes("contact") || msg.includes("email")) {
+          botReply = "📩 You can reach us at techaxiom0@gmail.com\n🔗 LinkedIn: https://www.linkedin.com/in/fares-boujeddien-b28115384\n🔗 Twitter: https://x.com/FBoujeddaien";
+        } else if (msg.includes("about") || msg.includes("company")) {
+          botReply = "🏢 AxiomTech is a technology-driven company delivering innovative web solutions and IT services worldwide.";
+        } else {
+          botReply = "🤖 Sorry, I didn’t quite understand that. Try asking about 'services', 'contact', or 'about'.";
+        }
+
+        messages.innerHTML += `<div><b>Bot:</b> ${botReply}</div>`;
+        messages.scrollTop = messages.scrollHeight;
+      }, 600);
     }
   </script>
+
 </body>
 </html>
